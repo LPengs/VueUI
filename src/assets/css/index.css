@@ -1,0 +1,143 @@
+.home-index .slider {
+  position: relative;
+  margin: 0 auto;
+  height: 574px;
+  width: 1200px;
+  overflow: hidden;
+}
+
+.home-index .slider .pika-stage {
+  height: 420px;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.home-index .slider .pika-stage.hasTrans {
+  transition: all .2s linear;
+}
+
+.home-index .slider .pika-stage .slider-item {
+  float: left;
+}
+
+.home-index .slider .pika-stage .slider-item img {
+  border: 0;
+  width: 1200px;
+  height: 420px;
+}
+
+.home-index .slider #slider-list {
+  position: absolute;
+  width: 1202px;
+  bottom: 0;
+}
+
+.home-index .slider #slider-list .s-slider-banner {
+  width: 202.3px;
+  height: 154px;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #fff;
+  margin-left: -1.97px;
+}
+
+.home-index .slider #slider-list .s-slider-banner .clip {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #000;
+}
+
+.home-index .slider #slider-list .s-slider-banner .clip img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  opacity: .4;
+  transform: perspective(1px) translate(-50%, -50%);
+}
+
+.home-index .slider #slider-list .s-slider-banner .clip img.active {
+  transition: opacity 400ms linear;
+  opacity: 1;
+}
+
+.home-index .slider #slider-list .s-slider-banner .clip img:hover {
+  transition: opacity 400ms linear;
+  opacity: 1;
+}
+
+.home-index .slider .previous, .home-index .slider .next {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  z-index: 3;
+  opacity: 0;
+}
+
+.home-index .slider .previous:hover, .home-index .slider .next:hover {
+  transition: opacity 400ms linear;
+  opacity: 1;
+}
+
+.home-index .slider .previous {
+  top: 34%;
+  left: 15px;
+  transform: rotate(-45deg);
+  border-left: 5px solid #fff;
+  border-top: 5px solid #fff;
+}
+
+.home-index .slider .next {
+  top: 34%;
+  right: 15px;
+  transform: rotate(45deg);
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+
+.home-index .main {
+  margin-top: 30px;
+}
+
+.home-index .main .container-fl {
+  float: left;
+  width: 880px;
+  border: solid 1px;
+}
+
+.home-index .main .container-fl .products .products-menu {
+  float: left;
+  width: 220px;
+  height: 420px;
+  background: url(../images/bg_products_menu.jpg);
+  background-size: cover;
+}
+
+.home-index .main .container-fl .products .products-menu ul {
+  padding: 120px 10px 0 10px;
+}
+
+.home-index .main .container-fl .products .products-menu ul li {
+  float: left;
+  width: 100px;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.home-index .main .container-fl .products .products-menu ul li a {
+  color: #fff;
+  opacity: .5;
+  display: block;
+}
+
+.home-index .main .container-fl .products .products-menu ul li a.selected {
+  opacity: 1;
+}
+/*# sourceMappingURL=index.css.map */

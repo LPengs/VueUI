@@ -1,0 +1,157 @@
+/* 给html设置最小高度 传递给body
+html height100%来传给body height 100% 获取屏幕窗口的大小
+然后再将这个body的高度传给内部的a层div
+这个a层div min-height 100% 就可以实现这层div大小占满全屏
+
+当父元素盒子不确定给多高时给html设置 */
+html {
+    min-height: 100%;
+    background: url(/images/bg_sign.jpg) no-repeat center;
+    background-size: cover;
+    /* box-sizing: border-box; */
+}
+
+.devise-main .devise-box {
+    width: 460px;
+    margin: 50px auto;
+    padding: 25px 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.devise-main .devise-box .devise-tabs {
+    position:relative;
+    width: 280px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.devise-main .devise-box .devise-tabs .tab-move {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100px;
+    height: 35px;
+    border-bottom: 1px solid #00AAEA;
+}
+
+.devise-main .devise-box .devise-tabs .tab-item {
+    display: block;
+    width: 140px;
+    float: left;
+    line-height: 35px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+/* a标签改变显示方式为块级元素继承父类样式 */
+.devise-main .devise-box .devise-tabs .tab-item a{
+    display: block;
+    color: #393B3D;
+}
+
+/* 当被选中时添加这个类      .tab-item.tab-current 连写意思是 class中包含这两个类的 */
+.devise-main .devise-box .devise-tabs .tab-item.tab-current a {
+    color: #00AAEA;
+}
+
+
+/* 主体部分 */
+.devise-main .devise-box .devise-panel {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content {
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content>ul>li {
+    margin-top: 15px;
+}
+
+/* .panpel-content盒子下所有input 字体样式 */
+.devise-main .devise-box .devise-panel .panpel-content input {
+    outline: none;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+/* 登录和注册的input样式 */
+.devise-main .devise-box .devise-panel .panpel-content input[type="text"],
+.devise-main .devise-box .devise-panel .panpel-content input[type="password"],
+.devise-main .devise-box .devise-panel .panpel-content input[type="tel"] {
+    display: block;
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    padding-left: 10px;
+    border: 1px solid #E2E2E2;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content li label {
+    padding-left: 5px;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content input[type="checkbox"] {
+    margin-top: 2px;
+}
+
+.f-left {
+    float: left !important;
+}
+.f-right {
+    float: right !important;
+}
+.f-right:hover {
+    text-decoration: underline;
+}
+
+/* 登录按钮和注册按钮样式 */
+.devise-main .devise-box .devise-panel .panpel-content .devise-btn {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    color: #fff;
+    border: none;
+    background-color: #00AAEA;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* 其他登录方式 */
+.devise-main .devise-box .devise-panel .panpel-content .devise-other-link {
+    margin-top: 20px;
+    margin-left: -128px;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content .devise-other-link a {
+    display: inline-block;
+    margin-left: 130px;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content .devise-other-link a img {
+    width: 30px;
+}
+
+
+/* 验证码 */
+#captcha {
+    float: left;
+    width: 50%;
+    margin-right: 5px;
+}
+
+.devise-main .devise-box .devise-panel .panpel-content .devise-send-code {
+    width: 150px;
+    height: 40px;
+    background-color: #00AAEA;
+    border: none;
+    color: #fff;
+    margin-left: 29px;
+    cursor:pointer;
+    outline: none;
+}
+

@@ -1,0 +1,136 @@
+$all_border:solid 1px;
+$next_border:5px solid #fff;
+$transtion:opacity 400ms linear;
+.home-index {
+    //轮播图
+    .slider{
+        position: relative;
+        margin: 0 auto;
+        height: 574px;
+        width: 1200px;
+        overflow: hidden;
+        //大图
+        .pika-stage  {
+            height:420px;
+            text-align: center;
+            background-color: #F5F5F5;
+            &.hasTrans{
+                transition:all .2s linear;
+            }
+            .slider-item{
+                // display: block;
+                float: left;
+                img {
+                    border: 0;
+                    width: 1200px;
+                    height: 420px;
+                }
+            }
+            
+        }
+        //缩略图
+        #slider-list{
+            position: absolute;
+            width: 1202px;
+            bottom: 0;
+            .s-slider-banner{
+                width: 202.3px;
+                height: 154px;
+                float: left;
+                cursor: pointer;
+                overflow: hidden;
+                position: relative;
+                border: 2px solid #fff;
+                margin-left: -1.97px;
+                .clip{
+                    position: relative;
+                    height: 100%;
+                    text-align: center;
+                    vertical-align: middle;
+                    background-color: #000;
+                    img{
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        height: 100%;
+                        opacity: .4;
+                        transform: perspective(1px) translate(-50%, -50%);
+                        &.active{
+                            transition: $transtion;
+                            opacity: 1;
+                        }
+                        &:hover{
+                            transition: $transtion;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        //左右箭头
+        .previous,.next{
+            position: absolute;
+            display: block;
+            width: 25px;
+            height: 25px;
+            z-index: 3;
+            opacity: 0;
+            &:hover{
+                transition: $transtion;
+                opacity: 1;
+            }
+        }
+        .previous{
+            top: 34%;
+            left: 15px;
+            transform: rotate(-45deg);
+            border-left: $next_border;
+            border-top: $next_border;
+        }
+        .next{
+            top: 34%;
+            right: 15px;
+            transform: rotate(45deg);
+            border-top: $next_border;
+            border-right: $next_border;
+        }
+    }
+    //内容导航
+    .main{
+        margin-top: 30px;
+        .container-fl{
+            float: left;
+            width: 880px;
+            border: $all_border;
+            .products{
+                .products-menu{
+                    float: left;
+                    width: 220px;
+                    height: 420px;
+                    background: url(../images/bg_products_menu.jpg);
+                    background-size: cover;
+                    ul {
+                        padding: 120px 10px 0 10px;
+                        li {
+                            float: left;
+                            width: 100px;
+                            text-align: center;
+                            font-size: 1.4rem;
+                            margin-bottom: 20px;
+                            a{
+                                color: #fff;
+                                opacity: .5;
+                                display: block;
+                                &.selected{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
